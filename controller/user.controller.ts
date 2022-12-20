@@ -1,5 +1,5 @@
 
-import express, { Request, Response } from "express";
+import { Request, Response } from "express";
 import { Types } from 'mongoose'
 import User from "../model/user.schema";
 import { IUser } from "../@types/Users.types";
@@ -7,11 +7,11 @@ import { IUser } from "../@types/Users.types";
 
 // ---------------------- Creating User --------------------
 export const CreateUser = async (req: Request, res: Response): Promise<void> => {
-    console.log(req.body)
     try {
         const user: IUser & {
             _id: Types.ObjectId;
-        } = await User.create(req.body);
+        } = await User.create(req.body)
+        
         res.status(201).json(user);
     } catch (error) {
         res.status(500).json(error)
