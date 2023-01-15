@@ -15,6 +15,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "typeRoots": [
+      "@types",
+      "./node_modules/@types",
+      "./node_modules/@microsoft"
+    ]
   },
   "exclude": [
     "node_modules",

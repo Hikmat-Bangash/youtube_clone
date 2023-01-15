@@ -1,5 +1,4 @@
 
-
 export interface IVideo {
     userId: string;
     title: string;
@@ -12,4 +11,5 @@ export interface IVideo {
     dislikes: string[];
     createdAt: Date;
     updatedAt: Date;
+    _id: any
 }
